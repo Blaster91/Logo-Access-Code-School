@@ -4,23 +4,37 @@
     padding: 0;
     transition: all 1s;
 }
+header{
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
 a{
     position: absolute;
     display: block;
     flex-direction: column;
     width: 300px;
-    margin-top: 20%;
-    margin-left: 20%;
     text-decoration: none;
     color: black;
     flex-shrink: 0;
-    
+}
+a:hover{
+    animation: masuperanimation 1s linear alternate infinite; /* On utilise "ma super animation" définie plus tôt */
+
 }
 a:hover h1{
+
+
     text-shadow: 1px 70px 11px #00000047, 1px 1px 16px #00ff2d99;
 }
 a:hover h2{
+    animation: masuperanimation2 1s alternate infinite linear;
     text-shadow: 1px 70px 11px #00000047, 1px 1px 6px #00c723;
+
 
 }
 a:hover .fas{
@@ -28,6 +42,7 @@ a:hover .fas{
 
 }
 a:hover span{
+
     box-shadow: 1px 70px 11px #d31f4349, 1px 1px 16px #00ff2d99;;
     text-shadow: none;
 }
@@ -49,10 +64,11 @@ h1{
     font-size: 2em;
 }
 h1, h2{
-    font-family:"Helvetica Neue LT Std 57 Condensed", sans-serif 
+    font-family:"Helvetica Neue LT Std 57 Condensed", sans-serif
 }
 h2{
     color: #424242;
+
 }
 
 .center-text{
@@ -68,13 +84,13 @@ h2{
     width: 100%;
     margin: 0px -26px 0 0;
     letter-spacing: 26px;
-    line-height: 22px;   
+    line-height: 22px;
 }
 span{
     background-color: #d31f43;
     color: white;
     padding: 3px;
-    
+
 }
 #container-logo{
     margin: auto;
@@ -88,4 +104,31 @@ span{
     margin: 0px 5px 0px 5px;
     font-size: 1.5em;
     width: 25px;
+}
+@keyframes masuperanimation {
+    from{
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes masuperanimation2 {
+    from{
+        letter-spacing: 25px;
+    }
+
+    50% {
+        letter-spacing: 27px;
+    }
+
+    to {
+        letter-spacing: 30px;
+    }
 }
